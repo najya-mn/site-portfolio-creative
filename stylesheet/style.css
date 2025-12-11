@@ -1,0 +1,281 @@
+/*Main Stylesheet*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	overflow-x: hidden;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: seagreen url('../media/illustration/lady\ in\ green\ staring\ at\ you_bg_compressed.webp');
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+	font-family: 'Montserrat';
+	font-size: 13px;
+}
+
+.second-body {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/*navigation*/
+.nav-container {
+	width: 100%;
+	top: 0;
+	position: sticky;
+}
+
+nav li {
+	float: right;
+	margin: 5px 5px 5px 0;
+	list-style-type: none;
+	padding: 5px 5px;
+	border-radius: 999em;
+	background-color: rgba(0, 55, 45, 1.0);
+	border: 2px solid white;
+	text-transform: uppercase;
+}
+
+.active {
+	color: white;
+	font-weight: bold;
+}
+
+nav li:hover {
+	background-color: rgba(0, 99, 71, 1);
+	color: white;
+}
+
+nav li a {
+	text-decoration: none;
+	padding: 5px 5px;
+	color: grey;
+	font-weight: 500;
+}
+
+nav li a:hover {
+	color: white;
+}
+
+
+/*contents*/
+.main-container {
+	width: 600px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+
+	margin: 40px 0 0 0;
+	/* or 0 if you want it tighter */
+
+	border: 3px solid white;
+	border-radius: 20px;
+	background: rgba(0, 99, 71, 0.6);
+
+	/*To hide scrollbar in IE, Edge and Firefox.*/
+	-ms-overflow-style: none;
+	/*for IE and Edge*/
+	scrollbar-width: none;
+	/*Firefox*/
+}
+
+/*To hide scrollbar in Chrome, Safari and Opera.*/
+.main-container::-webkit-scrollbar {
+	display: none;
+}
+
+.below-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.side-profile {
+	background-color: rgba(255, 44, 2, 0.0);
+	width: 30%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.side-profile p {
+	padding: 20px;
+	text-align: center;
+}
+
+.side-profile img {
+	border: 1px solid transparent;
+	border-radius: 999em;
+}
+
+.about-me {
+	/*To hide scrollbar in IE, Edge and Firefox.*/
+	-ms-overflow-style: none;
+	/*for IE and Edge*/
+	scrollbar-width: none;
+	/*Firefox*/
+
+	width: 70%;
+	padding: 20px;
+	margin: auto 10px;
+
+	background-color: rgba(46, 139, 87, 0.3);
+	border-radius: 20px;
+	height: 100%;
+	overflow: auto;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/*To hide scrollbar in Chrome, Safari and Opera.*/
+.about-me::-webkit-scrollbar {
+	display: none;
+}
+
+.about-me li {
+	margin-left: 20px;
+}
+
+.sidebyside {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.inside {
+	width: 50%;
+}
+
+.row img {
+	border-radius: 20px;
+}
+
+/*general*/
+
+img {
+	width: 100%;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+video {
+	border-radius: 20px;
+}
+
+.btms {
+	border-radius: 5px;
+	border-width: 0px;
+
+	width: 160px;
+
+	padding: 5px 0 5px 0;
+
+	font-weight: 700;
+	letter-spacing: 1px;
+
+	background-color: rgba(0, 55, 45, 1.0);
+	color: red;
+}
+
+.btms:hover {
+	background-color: rgba(0, 0, 0, 1);
+}
+
+.btms:active {
+	background-color: rgba(0, 55, 45, 0.8);
+}
+
+h4 a {
+	text-decoration: none;
+	color: rgba(0, 55, 45, 0.8);
+}
+
+/*footer*/
+footer {
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+	/* optional */
+	padding: 10px 0;
+}
+
+/*responsive*/
+/*max 400px*/
+@media screen and (max-width: 600px) {
+	.main-container {
+		width: calc(400px + 2vw);
+		height: calc(100vh - 100px);
+	}
+
+	.below-nav {
+		flex-direction: column;
+	}
+
+	.side-profile {
+		width: 100%;
+	}
+
+	.sidebyside {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.about-me {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		overflow: visible;
+	}
+
+	.inside {
+		width: 50%;
+	}
+
+	.side-profile img {
+		margin: 0;
+		width: 80%;
+	}
+
+	.row {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.column {
+		flex: 95%;
+		min-width: 95%;
+		margin: 0 auto;
+		padding: 0;
+	}
+}
