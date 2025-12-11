@@ -94,7 +94,8 @@ nav li a:hover {
 	-ms-overflow-style: none;
 	/*for IE and Edge*/
 	scrollbar-width: none;
-	/*Firefox*/
+
+	padding-bottom: 20px;
 }
 
 /*To hide scrollbar in Chrome, Safari and Opera.*/
@@ -234,8 +235,8 @@ footer {
 /*max 400px*/
 @media screen and (max-width: 600px) {
 	.main-container {
-		width: calc(400px + 2vw);
-		height: calc(100vh - 100px);
+		width: 100%;
+		margin: 0;
 	}
 
 	.below-nav {
